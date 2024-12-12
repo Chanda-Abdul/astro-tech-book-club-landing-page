@@ -1,0 +1,33 @@
+---
+import CTA from './CTA.astro';
+---
+
+<section class='hero'>
+  <h1>Join the ultimate tech book club</h1>
+  <p>
+    Turn your reading time into learning time with fellow tech enthusiasts. Get
+    curated recommendations, join vibrant discussions, and level up your skills
+    one chapter at a time.
+  </p>
+
+  <CTA />
+
+  <picture>
+    <source
+      media='(min-width: 1024px)'
+      srcset={'/src/assets/media/images/image-hero-desktop.webp'}
+    />
+    <source
+      media='(min-width: 768px)'
+      srcset={'/src/assets/media/images/image-hero-tablet.webp'}
+    />
+    <img src={'/src/assets/media/images/image-hero-mobile.webp'} alt='hero' />
+  </picture>
+</section>
+
+<style lang='scss'>
+  .hero {
+    background-color: var(--ivory-tower);
+    background-image: url('src/assets/media/images/pattern-light-bg.svg');
+  }
+</style>

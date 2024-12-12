@@ -1,0 +1,153 @@
+@import './reset';
+@import './typography';
+@import './variables';
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-content: $align;
+    align-items: $align;
+}
+
+body {
+    color: var(--midsummer-night);
+    @include flex(column, flex-start, flex-start);
+    align-self: stretch;
+}
+
+section,
+footer {
+    width: 100%;
+    @include flex(column, flex-start, flex-start);
+    padding: var(--spacing-l) var(--spacing-default);
+
+    &:last-of-type {
+        padding-bottom: var(--spacing-5xl);
+    }
+}
+
+section {
+    margin-bottom: var(--spacing-xl);
+}
+
+p {
+    @include bodyText();
+    color: var(--midsummer-night);
+    margin-bottom: var(--spacing-xl);
+
+    .semibold {
+        @include bodyTextBold();
+    }
+}
+
+
+button {
+    @include bodyTextHeading();
+    text-transform: uppercase;
+    @include flex(row, center, center);
+    align-self: stretch;
+    border: 2px solid var(--stellar-explorer);
+    border-radius: var(--border-radius-default);
+    padding: var(--spacing-m) var(--spacing-l);
+    gap: var(--spacing-default);
+    background: var(--seashell);
+    margin-bottom: var(--spacing-m);
+    transition: all .25s ease-in;
+
+    &:hover {
+        border: 2px solid var(--seashell);
+        color: var(--seashell);
+        background: var(--stellar-explorer);
+    }
+}
+
+h1 {
+    @include displayTextHeader();
+    background-image: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: var(--spacing-l);
+}
+
+h2 {
+    @include displayTextSecondaryHeader();
+    margin-bottom: var(--spacing-l);
+}
+
+h3 {
+    @include displayTitle();
+}
+
+h4 {
+
+    @include displayTextSecondaryHeader();
+    color: var(--midsummer-night);
+    @include flex(row, center, center);
+
+    span {
+        @include bodyTextHeading();
+        font-family: var(--default-font-body);
+        font-weight: var(--font-weight-default);
+    }
+}
+
+h6 {
+    @include bodyTextSubtitle();
+
+}
+
+article {
+    width: 100%;
+    @include flex(column, center, flex-start);
+
+    padding: var(--spacing-l);
+    gap: var(--spacing-l);
+    border-radius: var(--border-radius-default);
+    border: 1px solid var(--bridal-veil);
+
+}
+
+picture img {
+    border-radius: var(--border-radius-l);
+    margin: var(--spacing-2xl) 0;
+}
+
+ul {
+    li {
+        @include flex(row, flex-start, flex-start);
+        gap: var(--spacing-default);
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+ol li span {
+    @include displaySubTitle();
+}
+
+blockquote {
+    h2 {
+        @include displayTitle();
+    }
+
+    h3 {
+        @include bodyText();
+        font-family: var(--default-font-body);
+    }
+}
+
+
+@media screen and (min-width: 37.5em) {
+
+    /* Tablet > 600px */
+
+}
+
+@media screen and (min-width: 75em) {
+
+    /* Desktop > 1200px */
+}

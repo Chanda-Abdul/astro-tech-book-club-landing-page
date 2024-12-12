@@ -1,0 +1,80 @@
+---
+import CTA from './CTA.astro';
+
+const socialLinks = [
+  {
+    platform: 'BlueSky',
+    link: 'http://bluesky.com',
+    icon: '/src/assets/media/images/logo-bluesky.svg',
+  },
+  {
+    platform: 'LinkedIn',
+    link: 'http://linkedIn.com',
+    icon: '/src/assets/media/images/logo-linkedin.svg',
+  },
+];
+---
+
+<footer class='attribution'>
+  <h2>Ready to debug your reading list?</h2>
+  <CTA />
+
+  <h6>© 2024 - Tech Book Club</h6>
+  <ul class='socials'>
+    {
+      socialLinks.map((socials) => (
+        <li>
+          <a href={socials.link}>
+            <img src={socials.icon} alt={socials.platform} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class='info'>
+    Challenge by <a
+      href='https://www.frontendmentor.io?ref=challenge'
+      target='_blank'>Frontend Mentor</a
+    >. Coded by <a href='ChandaAbdul.dev' target='_blank'>Chanda Abdul</a>.
+  </p>
+</footer>
+
+<style lang='scss'>
+  footer {
+    background: var(--stellar-explorer);
+    * {
+      color: var(--ivory-tower);
+    }
+    .cta {
+      h6 {
+        text-align: left;
+        color: var(--ivory-tower);
+      }
+    }
+  }
+  .attribution {
+    font-size: var(--font-size-subtitle);
+    text-align: center;
+    margin-bottom: var(--spacing-m);
+    display: flex;
+    padding: var(--spacing-4xl) var(--spacing-default) 0px
+      var(--spacing-default);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-4xl);
+    align-self: stretch;
+    border-radius: var(--spacing-default) var(--spacing-default) 0px 0px;
+    .socials {
+      display: flex;
+      gap: var(--spacing-l);
+    }
+    p {
+      font-size: var(--font-size-subtitle);
+    }
+    a {
+      color: var(--powdered-peach);
+      font-weight: var(--font-weight-display);
+      font-size: var(--font-size-subtitle);
+    }
+  }
+</style>

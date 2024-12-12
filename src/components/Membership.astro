@@ -1,0 +1,140 @@
+---
+const membershipTiers = [
+  {
+    membership: 'Starter',
+    price: '$19',
+    features: ['1 book/month', 'Online forums'],
+    cta: 'Subscribe now',
+  },
+  {
+    membership: 'Pro',
+    price: '$29',
+    features: ['2 books/month', 'Virtual meetups'],
+    cta: 'Subscribe now',
+  },
+  {
+    membership: 'Enterprise',
+    features: ['Team access', 'Private sessions'],
+    cta: 'Talk to us',
+  },
+];
+---
+
+<section class='connect'>
+  <h2>
+    Not your average book <span class='circ'
+      >club <img
+        src='/src/assets/media/images/pattern-circle.png'
+        alt='circle patttern'
+      /></span
+    >
+  </h2>
+  <p>
+    Connect with a community that speaks your language - from <span
+      class='semibold'>Python</span
+    > to
+    <span class='semibold'>TypeScript</span> and everything in between. Our discussions
+    blend technical depth with practical applications.
+  </p>
+  <picture>
+    <source
+      media='(min-width: 1024px)'
+      srcset={'/src/assets/media/images/image-not-average-desktop.webp'}
+    />
+    <source
+      media='(min-width: 768px)'
+      srcset={'/src/assets/media/images/image-not-average-tablet.webp'}
+    />
+    <img
+      src={'/src/assets/media/images/image-not-average-mobile.webp'}
+      alt='read together'
+    />
+  </picture>
+</section>
+
+<section class='membership'>
+  <h2>Membership Options</h2>
+  <ul>
+    {
+      membershipTiers.map((membership) => (
+        <li>
+          <article class='membership__card'>
+            <h3>{membership.membership}</h3>
+            {membership.price ? (
+              <h4>
+                {membership.price} <span>/month</span>
+              </h4>
+            ) : (
+              <h4>Custom</h4>
+            )}
+            <hr />
+            <ul class='features'>
+              {membership.features.map((feature) => (
+                <li>
+                  <img
+                    src='/src/assets/media/icons/icon-check.svg'
+                    alt='check'
+                  />
+                  <p>{feature}</p>
+                </li>
+              ))}
+            </ul>
+            <button class='btn-secondary'>{membership.cta}</button>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style lang='scss'>
+  .connect {
+    .circ {
+      display: block;
+      position: relative;
+      img {
+        position: absolute;
+        left: -1.2rem;
+        top: -0.5rem;
+        width: 13rem;
+      }
+    }
+  }
+
+  .membership {
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-default);
+      hr {
+        height: 1px;
+        width: 100%;
+        background: var(--bridal-veil);
+      }
+      li:nth-child(odd) article {
+        background: var(--blanc);
+      }
+
+      li:nth-child(even) article {
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.4;
+          z-index: -1;
+          background: var(--card-gradient);
+          backdrop-filter: blur(100px);
+        }
+      }
+    }
+    &__card {
+      // width: 34rem;
+    }
+  }
+</style>

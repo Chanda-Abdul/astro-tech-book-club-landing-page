@@ -1,0 +1,77 @@
+:root {
+    /* Primary Colors */
+    --stellar-explorer: hsl(194, 78%, 11%);
+    --midsummer-night: hsl(195, 23%, 28%);
+    --legacy-blue:hsl(196, 46%, 73%);
+    --bridal-veil: hsl(17, 12%, 89%);
+    --ivory-tower: hsl(17, 41%, 97%);
+    --blanc: hsl(0, 0%, 100%);
+
+    /* Accent Colors */
+    --salmon: hsl(22, 99%, 72%);
+    --powdered-peach: hsl(22, 100%, 91%);
+    --seashell: hsl(23, 100%, 97%);
+
+    --text-gradient: linear-gradient(107deg, var(--salmon) -11.37%, var(--stellar-explorer) 61.84%);
+    --default-gradient: linear-gradient(90deg, var(--powdered-peach) 0%, var(--seashell)100%);
+    --card-gradient:linear-gradient(135deg, var(--bridal-veil) 65%, var(--legacy-blue) 100%);
+
+    /* Typography */
+
+    /* Font Family */
+    --default-font-body: 'Inter', sans-serif;
+    --default-font-display: 'Martian Mono', serif;
+
+    /* Font Sizing */
+    --font-size-default: 2rem;
+    --font-size-h1-mobile: 3.8rem;
+    --font-size-h1: 6.2rem;
+    --font-size-h2-mobile: 3.4rem;
+    --font-size-h2: 5rem;
+    --font-size-h3-mobile: 2.4rem;
+    --font-size-h3: 3.4rem;
+    --font-size-title: 1.8rem;
+    --font-size-title-mobile: 1.6rem;
+    --font-size-subtitle: 1.4rem;
+
+    /* Font Weight */
+    --font-weight-default: 400;
+    --font-weight-display: 700;
+    --font-weight-semi-bold: 600;
+
+    /* Line Height */
+    --line-height-small: 110%;
+    --line-height-display: 120%;
+    --line-height-medium: 130%;
+    --line-height-default: 140%;
+
+    /* Letter Spacing */
+    --letter-spacing-display: -2px;
+    --letter-spacing-small: -1px;
+    --letter-spacing-default: -0.5px;
+
+    /* Spacing */
+    --spacing-4xs: 0.2rem;
+    --spacing-3xs: 0.4rem;
+    --spacing-2xs: 0.6rem;
+    --spacing-xs: 0.8rem;
+    --spacing-s: 1.2rem;
+    --spacing-default: 1.6rem;
+    --spacing-m: 2.0rem;
+    --spacing-l: 2.4rem;
+    --spacing-xl: 3.2rem;
+    --spacing-2xl: 4.0rem;
+    --spacing-3xl: 4.8rem;
+    --spacing-4xl: 6.4rem;
+    --spacing-5xl: 8.0rem;
+
+    /* Border Radius */
+    --border-radius-default-xs: 0.4rem;
+    --border-radius-default-s: 0.6rem;
+    --border-radius-default: 0.8rem;
+    --border-radius-m: 1.2rem;
+    --border-radius-l: 1.6rem;
+    --border-radius-xl: 2.0rem;
+    --border-radius-xxl: 2.4rem;
+    --border-radius-circ: 99.9rem;
+}

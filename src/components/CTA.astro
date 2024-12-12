@@ -1,0 +1,54 @@
+---
+import FiveStars from './FiveStars.astro';
+---
+
+<div class='cta'>
+  <button
+    >Review membership options
+    <img src='/src/assets/media/icons/icon-arrow-down.svg' alt='arrow down' />
+  </button>
+
+  <div class='cta__row'>
+    <img
+      src='/src/assets/media/images/image-avatars.webp'
+      alt='avatars'
+      class='cta__avatars'
+    />
+    <div class='cta__col'>
+      <FiveStars />
+      <h6>200+ developers joined already</h6>
+    </div>
+  </div>
+</div>
+
+<style lang='scss'>
+  .cta {
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-default);
+    &__row {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      align-items: center;
+      gap: var(--spacing-s);
+    }
+
+    &__col {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: flex-start;
+    }
+    &__avatars {
+      width: 11rem;
+    }
+    h6 {
+      text-align: left;
+      color: inherit;
+    }
+  }
+</style>

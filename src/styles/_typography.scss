@@ -1,0 +1,142 @@
+/* Body Font */
+@font-face {
+    font-family: 'Inter';
+    src: url('/src/assets/fonts/inter/static/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/src/assets/fonts/inter/static/Inter_18pt-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* Display Font */
+@font-face {
+    font-family: 'Martian Mono';
+    src: url('/src/assets/fonts/martian-mono/static/MartianMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Martian Mono';
+    src: url('/src/assets/fonts/martian-mono/static/MartianMono-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Martian Mono';
+    src: url('/src/assets/fonts/martian-mono/static/MartianMono-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+/* Text Presets */
+@mixin displayTextHeader() {
+    color: var(--stellar-explorer);
+    font-family: var(--default-font-display);
+    font-style: normal;
+    font-weight: var(--font-weight-display);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+
+    /* Mobile */
+    font-size: var(--font-size-h1-mobile);
+
+    /* Tablet & Desktop */
+    @media screen and (min-width: 37.5em) {
+        font-size: var(--font-size-h1);
+    }
+
+}
+
+@mixin displayTextSecondaryHeader() {
+    @include displayTextHeader();
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height-medium);
+
+    /* Mobile */
+    font-size: var(--font-size-h2-mobile);
+
+    /* Tablet & Desktop */
+    @media screen and (min-width: 37.5em) {
+        font-size: var(--font-size-h2);
+    }
+}
+
+@mixin displayTitle() {
+    @include displayTextHeader();
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height-small);
+    letter-spacing: var(--letter-spacing-small);
+
+    /* Mobile */
+    font-size: var(--font-size-h3-mobile);
+
+    /* Tablet & Desktop */
+    @media screen and (min-width: 37.5em) {
+        font-size: var(--font-size-h3);
+        line-height: var(--line-height-medium);
+        letter-spacing: var(--letter-spacing-small);
+    }
+}
+
+@mixin displaySubTitle() {
+    @include displayTextHeader();
+    leading-trim: both;
+    text-edge: cap;
+    font-weight: var(--font-weight-default);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-small);
+    font-size: var(--font-size-h3-mobile);
+
+}
+
+@mixin displaySubTitleBold() {
+    @include displaySubTitle();
+    font-weight: var(--font-weight-semi-bold);
+}
+
+@mixin bodyText() {
+    font-family: var(--default-font-body);
+    font-size: var(--font-size-default);
+    font-style: normal;
+    font-weight: var(--font-weight-default);
+    line-height: var(--line-height-default);
+    letter-spacing: var(--letter-spacing-default);
+}
+
+@mixin bodyTextBold() {
+    @include bodyText();
+    font-weight: var(--font-weight-semi-bold);
+}
+
+@mixin bodyTextHeading() {
+    @include bodyText();
+    font-family: var(--default-font-display);
+    font-size: var(--font-size-title-mobile);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--line-height-medium);
+    letter-spacing: var(--letter-spacing-small);
+
+    /* Tablet & Desktop */
+    @media screen and (min-width: 37.5em) {
+        font-size: var(--font-size-title);
+    }
+}
+
+@mixin bodyTextSubtitle() {
+    @include bodyTextHeading();
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-default);
+    line-height: var(--line-height-display);
+}
