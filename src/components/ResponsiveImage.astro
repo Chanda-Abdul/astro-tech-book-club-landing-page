@@ -1,0 +1,54 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+type Images = {
+  desktopImgUrl?: string;
+  tabletImgUrl?: string;
+  mobileImgUrl?: string;
+};
+
+interface Props {
+  className?: string;
+  mobileImgUrl: string;
+  tabletImgUrl: string;
+  desktopImgUrl: string;
+  alt: string;
+}
+const { mobileImgUrl, tabletImgUrl, desktopImgUrl, alt } = Astro.props;
+
+const mobileImg = await getImage({
+  src: mobileImgUrl,
+  format: 'webp',
+  width: 375,
+  height: 375,
+});
+
+const tabletImg = await getImage({
+  src: tabletImgUrl,
+  format: 'webp',
+  width: 1000,
+  height: 1500,
+});
+
+const desktopImg = await getImage({
+  src: desktopImgUrl,
+  format: 'webp',
+  width: 1000,
+  height: 1500,
+});
+---
+
+<picture>
+  <source media='(max-width: 768px)' srcset={mobileImg.src} />
+  <source media='(max-width: 1200px)' srcset={tabletImg.src} />
+  <source media='(min-width: 1200px)' srcset={desktopImg.src} />
+  <img src={desktopImg.src} alt={alt} />
+</picture>
+
+<style lang='scss'>
+  picture img {
+    border-radius: var(--border-radius-l);
+    margin: var(--spacing-2xl) 0;
+  }
+</style>

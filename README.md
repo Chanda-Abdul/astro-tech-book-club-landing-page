@@ -8,7 +8,7 @@ This is a solution to the [Tech book club landing page challenge on Frontend Men
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
+- [My process](#my-proc`  ess)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -26,13 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<!-- ![](./screenshot.jpg) -->
 
 ### Links
-<!-- 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
 
+- Solution URL: [here](https://github.com/Chanda-Abdul/astro-tech-book-club-landing-page)
+- Live Site URL: [here](https://aquamarine-shortbread-36e3cd.netlify.app/) 
 ## My process
 
 ### Built with

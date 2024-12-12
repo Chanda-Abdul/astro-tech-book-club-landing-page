@@ -1,42 +1,34 @@
 ---
-
+import ResponsiveImage from './ResponsiveImage.astro';
 ---
 
 <section class='features'>
   <h2>Read together, grow together</h2>
   <ul>
     <li>
-      <img src='/src/assets/media/icons/icon-check.svg' alt='check' />
+      <img src='/assets/media/icons/icon-check.svg' alt='check' />
       <p>Monthly curated tech reads selected by industry experts</p>
     </li>
     <li>
-      <img src='/src/assets/media/icons/icon-check.svg' alt='check' />
+      <img src='/assets/media/icons/icon-check.svg' alt='check' />
       <p>Virtual and in-person meetups for deep-dive discussions</p>
     </li>
     <li>
-      <img src='/src/assets/media/icons/icon-check.svg' alt='check' />
+      <img src='/assets/media/icons/icon-check.svg' alt='check' />
       <p>Early access to new tech book releases</p>
     </li>
     <li>
-      <img src='/src/assets/media/icons/icon-check.svg' alt='check' />
+      <img src='/assets/media/icons/icon-check.svg' alt='check' />
       <p>Author Q&A sessions with tech thought leaders</p>
     </li>
   </ul>
 
-  <picture>
-    <source
-      media='(min-width: 1024px)'
-      srcset={'/src/assets/media/images/image-read-together-desktop.webp'}
-    />
-    <source
-      media='(min-width: 768px)'
-      srcset={'/src/assets/media/images/image-read-together-tablet.webp'}
-    />
-    <img
-      src={'/src/assets/media/images/image-read-together-mobile.webp'}
-      alt='read together'
-    />
-  </picture>
+  <ResponsiveImage
+    mobileImgUrl='/assets/media/images/image-read-together-mobile.webp'
+    tabletImgUrl='/assets/media/images/image-read-together-tablet.webp'
+    desktopImgUrl='/assets/media/images/image-read-together-desktop.webp'
+    alt='read together'
+  />
 </section>
 
 <style lang='scss'>

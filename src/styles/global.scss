@@ -93,7 +93,7 @@ h4 {
     }
 }
 
-h6 {
+h5, h6 {
     @include bodyTextSubtitle();
 
 }
@@ -101,18 +101,12 @@ h6 {
 article {
     width: 100%;
     @include flex(column, center, flex-start);
-
     padding: var(--spacing-l);
     gap: var(--spacing-l);
     border-radius: var(--border-radius-default);
     border: 1px solid var(--bridal-veil);
-
 }
 
-picture img {
-    border-radius: var(--border-radius-l);
-    margin: var(--spacing-2xl) 0;
-}
 
 ul {
     li {

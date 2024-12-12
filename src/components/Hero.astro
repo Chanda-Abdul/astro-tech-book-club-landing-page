@@ -1,5 +1,6 @@
 ---
 import CTA from './CTA.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
 ---
 
 <section class='hero'>
@@ -12,22 +13,17 @@ import CTA from './CTA.astro';
 
   <CTA />
 
-  <picture>
-    <source
-      media='(min-width: 1024px)'
-      srcset={'/src/assets/media/images/image-hero-desktop.webp'}
-    />
-    <source
-      media='(min-width: 768px)'
-      srcset={'/src/assets/media/images/image-hero-tablet.webp'}
-    />
-    <img src={'/src/assets/media/images/image-hero-mobile.webp'} alt='hero' />
-  </picture>
+  <ResponsiveImage
+    mobileImgUrl='/assets/media/images/image-hero-mobile.webp'
+    tabletImgUrl='/assets/media/images/image-hero-tablet.webp'
+    desktopImgUrl='/assets/media/images/image-hero-desktop.webp'
+    alt='hero image'
+  />
 </section>
 
 <style lang='scss'>
   .hero {
     background-color: var(--ivory-tower);
-    background-image: url('src/assets/media/images/pattern-light-bg.svg');
+    background-image: url('assets/media/images/pattern-light-bg.svg');
   }
 </style>

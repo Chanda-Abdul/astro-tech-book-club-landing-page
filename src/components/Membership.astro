@@ -1,4 +1,6 @@
 ---
+import ResponsiveImage from './ResponsiveImage.astro';
+
 const membershipTiers = [
   {
     membership: 'Starter',
@@ -24,7 +26,7 @@ const membershipTiers = [
   <h2>
     Not your average book <span class='circ'
       >club <img
-        src='/src/assets/media/images/pattern-circle.png'
+        src='/assets/media/images/pattern-circle.png'
         alt='circle patttern'
       /></span
     >
@@ -36,20 +38,13 @@ const membershipTiers = [
     <span class='semibold'>TypeScript</span> and everything in between. Our discussions
     blend technical depth with practical applications.
   </p>
-  <picture>
-    <source
-      media='(min-width: 1024px)'
-      srcset={'/src/assets/media/images/image-not-average-desktop.webp'}
-    />
-    <source
-      media='(min-width: 768px)'
-      srcset={'/src/assets/media/images/image-not-average-tablet.webp'}
-    />
-    <img
-      src={'/src/assets/media/images/image-not-average-mobile.webp'}
-      alt='read together'
-    />
-  </picture>
+
+  <ResponsiveImage
+    mobileImgUrl='/assets/media/images/image-not-average-mobile.webp'
+    tabletImgUrl='/assets/media/images/image-not-average-tablet.webp'
+    desktopImgUrl='/assets/media/images/image-not-average-desktop.webp'
+    alt='read together image'
+  />
 </section>
 
 <section class='membership'>
@@ -71,10 +66,7 @@ const membershipTiers = [
             <ul class='features'>
               {membership.features.map((feature) => (
                 <li>
-                  <img
-                    src='/src/assets/media/icons/icon-check.svg'
-                    alt='check'
-                  />
+                  <img src='/assets/media/icons/icon-check.svg' alt='check' />
                   <p>{feature}</p>
                 </li>
               ))}
