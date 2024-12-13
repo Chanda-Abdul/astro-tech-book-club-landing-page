@@ -24,7 +24,7 @@ const membershipTiers = [
 
 <section class='connect'>
   <h2>
-    Not your <br />average book <br /><span class='circ'
+    Not your average book <span class='circ'
       >club <img
         src='/assets/media/images/pattern-circle.png'
         alt='circle patttern'
@@ -85,19 +85,24 @@ const membershipTiers = [
     display: flex;
     flex-direction: column;
     gap: var(--spacing-l);
+    padding-right: 2rem;
     h2 {
       margin-bottom: 0;
     }
     .circ {
-      display: block;
+      // display: block;
       position: relative;
       img {
         position: absolute;
+        z-index: 2;
         left: -1.5rem;
         top: -0.75rem;
         width: 12rem;
       }
     }
+  }
+  p{
+    margin-bottom: 0;
   }
 
   .membership {
@@ -127,7 +132,7 @@ const membershipTiers = [
           left: 0;
           width: 100%;
           height: 100%;
-          opacity: 0.4;
+          opacity: 0.1;
           z-index: -1;
           background: var(--card-gradient);
           backdrop-filter: blur(100px);
@@ -135,7 +140,33 @@ const membershipTiers = [
       }
     }
     &__card {
-
+    }
+  }
+  @media screen and (min-width: 37.5em) {
+    /* Tablet > 600px */
+    .connect {
+      padding-right: 6rem;
+      gap: var(--spacing-2xl);
+      .circ {
+     
+        img {
+          z-index: 2;
+          left: -1rem;
+          top: 0rem;
+          width: 80rem;
+          transform: rotate(-5.091deg);
+        }
+      }
+    }
+    .membership{
+      ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        article{
+        width: 34rem;
+        
+    }
+      }
     }
   }
 </style>

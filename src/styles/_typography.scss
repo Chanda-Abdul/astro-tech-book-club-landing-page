@@ -135,7 +135,9 @@
 }
 
 @mixin bodyTextSubtitle() {
-    @include bodyTextHeading();
+    font-family: var(--default-font-display);
+    font-style: normal;
+    letter-spacing: var(--letter-spacing-small);
     font-size: var(--font-size-subtitle);
     font-weight: var(--font-weight-default);
     line-height: var(--line-height-display);

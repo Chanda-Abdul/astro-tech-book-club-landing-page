@@ -21,18 +21,20 @@ const socialLinks = [
   <CTA />
   <hr />
   <div class='attribution'>
-    <h6>&copy {year} - Tech Book Club</h6>
-    <ul class='socials'>
-      {
-        socialLinks.map((socials) => (
-          <li>
-            <a href={socials.link}>
-              <img src={socials.icon} alt={socials.platform} />
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <div class='legal'>
+      <h6>&copy {year} - Tech Book Club</h6>
+      <ul class='socials'>
+        {
+          socialLinks.map((socials) => (
+            <li>
+              <a href={socials.link}>
+                <img src={socials.icon} alt={socials.platform} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
     <p class='info'>
       Challenge by <a
         href='https://www.frontendmentor.io?ref=challenge'
@@ -79,9 +81,30 @@ const socialLinks = [
       flex-direction: column;
       align-items: center;
       gap: var(--spacing-default);
+      width: 100%;
+      .legal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-default);
+      }
+      @media screen and (min-width: 37.5em) {
+        /* Tablet > 600px */
+        align-items: flex-start;
+        .legal {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
 
+          a {
+            margin-bottom: 0;
+          }
+        }
+      }
       .socials {
         display: flex;
+        align-items: center;
         gap: var(--spacing-l);
       }
       p,

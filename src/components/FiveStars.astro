@@ -1,6 +1,7 @@
 ---
 
 ---
+
 <ul class='stars'>
   <li><img src='/assets/media/icons/icon-star.svg' alt='star' /></li>
   <li><img src='/assets/media/icons/icon-star.svg' alt='star' /></li>
@@ -16,5 +17,17 @@
     justify-items: center;
     align-items: center;
     padding-bottom: 4px;
+    li img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    @media screen and (min-width: 37.5em) {
+      /* Tablet > 600px */
+      gap: 6px;
+      li img {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+    }
   }
 </style>

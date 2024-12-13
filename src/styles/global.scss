@@ -26,6 +26,7 @@ footer {
 
 section {
     padding: var(--spacing-4xl) var(--spacing-default);
+text-align: left;
 }
 
 p,
@@ -118,6 +119,9 @@ article {
     gap: var(--spacing-l);
     border-radius: var(--border-radius-default);
     border: 1px solid var(--bridal-veil);
+    display: flex;
+
+
 
 
 }
@@ -177,7 +181,13 @@ footer .cta {
 
 @media screen and (min-width: 37.5em) {
     /* Tablet > 600px */
-
+    section {
+        padding: var(--spacing-4xl) var(--spacing-xl);
+    }
+    h1{
+        padding-right: 10rem;
+    }
+  
 }
 
 @media screen and (min-width: 75em) {
