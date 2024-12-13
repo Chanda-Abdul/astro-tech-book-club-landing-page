@@ -21,11 +21,11 @@ This is a solution to the [Tech book club landing page challenge on Frontend Men
 
 Users should be able to:
 
-- [ ] View the optimal layout for the interface depending on their device's screen size
+- [x] View the optimal layout for the interface depending on their device's screen size
   - [x] Mobile `<600px`
-  - [ ] Tablet `>600px` && `<900px`
-  - [ ] Desktop `<900px`
-- [ ] See hover and focus states for all interactive elements on the page
+  - [x] Tablet `>600px` && `<900px`
+  - [x] Desktop `<900px`
+- [x] See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
@@ -52,9 +52,6 @@ Users should be able to:
 - [CSS `::after` Pseudo-element](https://www.w3schools.com/cssref/sel_after.php) - 
 - [astro.build/](https://astro.build/) - The web framework for content-driven websites
 Astro powers the world's fastest marketing sites, blogs, e-commerce websites, and more.
-<!-- - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
 
 
 ## Author

@@ -127,11 +127,6 @@
     font-weight: var(--font-weight-semi-bold);
     line-height: var(--line-height-medium);
     letter-spacing: var(--letter-spacing-small);
-
-    /* Tablet & Desktop */
-    @media screen and (min-width: 37.5em) {
-        // font-size: var(--font-size-title);
-    }
 }
 
 @mixin bodyTextSubtitle() {
