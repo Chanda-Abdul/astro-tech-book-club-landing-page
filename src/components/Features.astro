@@ -10,18 +10,19 @@ const featuresList = [
 ---
 
 <section class='features'>
-  <h2>Read together, grow together</h2>
-  <ul>
-    {
-      featuresList.map((feature) => (
-        <li>
-          <img src='/assets/media/icons/icon-check.svg' alt='check' />
-          <p>{feature}</p>
-        </li>
-      ))
-    }
-  </ul>
-
+  <div class='desktop-column'>
+    <h2>Read together, grow together</h2>
+    <ul>
+      {
+        featuresList.map((feature) => (
+          <li>
+            <img src='/assets/media/icons/icon-check.svg' alt='check' />
+            <p>{feature}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
   <ResponsiveImage
     mobileImgUrl='/assets/media/images/image-read-together-mobile.webp'
     tabletImgUrl='/assets/media/images/image-read-together-tablet.webp'
@@ -35,6 +36,10 @@ const featuresList = [
     background-color: var(--blanc);
     ul li {
       margin-bottom: var(--spacing-default);
+    }
+    @media screen and (min-width: 56.25em) {
+      /* Desktop > 1200px */
+      flex-direction: row-reverse;
     }
   }
 </style>

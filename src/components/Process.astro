@@ -17,10 +17,7 @@ const processSteps = [
             <>
               <div>
                 <span>{i + 1}</span>
-                <img
-                  src='assets/media/images/pattern-arrow.svg'
-                  alt='arrow'
-                />
+                <img src='assets/media/images/pattern-arrow.svg' alt='arrow' />
               </div>
               <h6>{step}</h6>
             </>
@@ -33,29 +30,27 @@ const processSteps = [
 
 <style lang='scss'>
   @media screen and (max-width: 37.5em) {
-   /* Mobile < 600px */
+    /* Mobile < 600px */
     .process {
       display: none;
     }
-}
-@media screen and (min-width: 37.5em) {
-
-/* Tablet > 600px */
-.process {
+  }
+  @media screen and (min-width: 37.5em) {
+    /* Tablet > 600px */
+    .process {
       display: flex;
     }
+  }
 
-}
-@media screen and (min-width: 75em) {
-
-/* Desktop > 1200px */
-}
   .process {
     article {
       background: var(--card-gradient);
       background-image: url('/assets/media/images/pattern-light-bg.svg');
       position: relative;
       z-index: 1;
+      h2{
+          max-width:51.2rem;
+        }
       &::before {
         content: '';
         position: absolute;
@@ -78,6 +73,7 @@ const processSteps = [
       list-style: none;
       width: 100%;
       gap: var(--spacing-default);
+
       li {
         width: 100%;
         display: flex;
@@ -113,8 +109,26 @@ const processSteps = [
           display: block;
           color: var(--stellar-explorer);
           font-weight: 600;
-          line-height: 130%; 
+          line-height: 130%;
           letter-spacing: -0.18px;
+        }
+      }
+    }
+    @media screen and (min-width: 56.25em) {
+      /* Desktop > 1200px */
+      article {
+        padding: var(--spacing-5xl) var(--spacing-3xl);
+        gap: var(--spacing-4xl);
+      h2{
+        align-self: center;
+      }
+        ol {
+          flex-direction: row;
+          display: flex;
+
+       
+
+          gap: var(--spacing-4xl);
         }
       }
     }

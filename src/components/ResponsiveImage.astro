@@ -50,4 +50,14 @@ const desktopImg = await getImage({
   picture img {
     border-radius: var(--border-radius-l);
   }
+  @media screen and (min-width: 56.25em) {
+    /* Desktop > 1200px */
+    picture img {
+      max-width: 54rem;
+      max-height: 60rem;
+      flex-shrink: 0;
+      //     height: 100%;
+      //     width: 100%;
+    }
+  }
 </style>

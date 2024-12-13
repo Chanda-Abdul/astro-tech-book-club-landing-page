@@ -1,4 +1,5 @@
 ---
+import Process from './Process.astro';
 import ResponsiveImage from './ResponsiveImage.astro';
 
 const membershipTiers = [
@@ -23,22 +24,23 @@ const membershipTiers = [
 ---
 
 <section class='connect'>
-  <h2>
-    Not your average book <span class='circ'
-      >club <img
-        src='/assets/media/images/pattern-circle.png'
-        alt='circle patttern'
-      /></span
-    >
-  </h2>
-  <p>
-    Connect with a community that speaks your language - from <span
-      class='semibold'>Python</span
-    > to
-    <span class='semibold'>TypeScript</span> and everything in between. Our discussions
-    blend technical depth with practical applications.
-  </p>
-
+  <div class='desktop-column'>
+    <h2>
+      Not your average book <span class='circ'
+        >club <img
+          src='/assets/media/images/pattern-circle.png'
+          alt='circle patttern'
+        /></span
+      >
+    </h2>
+    <p>
+      Connect with a community that speaks your language - from <span
+        class='semibold'>Python</span
+      > to
+      <span class='semibold'>TypeScript</span> and everything in between. Our discussions
+      blend technical depth with practical applications.
+    </p>
+  </div>
   <ResponsiveImage
     mobileImgUrl='/assets/media/images/image-not-average-mobile.webp'
     tabletImgUrl='/assets/media/images/image-not-average-tablet.webp'
@@ -46,7 +48,7 @@ const membershipTiers = [
     alt='read together image'
   />
 </section>
-
+<Process />
 <section class='membership'>
   <h2>Membership Options</h2>
   <ul>
@@ -82,15 +84,12 @@ const membershipTiers = [
 <style lang='scss'>
   .connect {
     padding-top: 0;
-    display: flex;
-    flex-direction: column;
     gap: var(--spacing-l);
     padding-right: 2rem;
     h2 {
       margin-bottom: 0;
     }
     .circ {
-      // display: block;
       position: relative;
       img {
         position: absolute;
@@ -101,7 +100,7 @@ const membershipTiers = [
       }
     }
   }
-  p{
+  p {
     margin-bottom: 0;
   }
 
@@ -132,7 +131,7 @@ const membershipTiers = [
           left: 0;
           width: 100%;
           height: 100%;
-          opacity: 0.1;
+          opacity: 0.4;
           z-index: -1;
           background: var(--card-gradient);
           backdrop-filter: blur(100px);
@@ -148,7 +147,6 @@ const membershipTiers = [
       padding-right: 6rem;
       gap: var(--spacing-2xl);
       .circ {
-     
         img {
           z-index: 2;
           left: -1rem;
@@ -158,14 +156,48 @@ const membershipTiers = [
         }
       }
     }
-    .membership{
-      ul{
+    .membership {
+      ul {
         flex-direction: row;
         flex-wrap: wrap;
-        article{
-        width: 34rem;
-        
+
+        article {
+          max-width: 34rem;
+        }
+      }
     }
+    h3 {
+      font-size: 2.4rem;
+    }
+    h4 {
+      font-size: 3.4rem;
+    }
+  }
+
+  @media screen and (min-width: 56.25em) {
+    /* Desktop > 900px */
+    .connect {
+      padding-right: 0;
+    }
+    .membership {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      ul {
+        flex-wrap: nowrap;
+        gap: var(--spacing-l);
+        justify-content: center;
+        align-items: center;
+        .features {
+          flex-direction: column;
+        }
+        li article {
+          transition: all 0.25s ease-in;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
       }
     }
   }

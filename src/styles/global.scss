@@ -21,12 +21,13 @@ footer {
     width: 100%;
     @include flex(column, flex-start, flex-start);
     gap: var(--spacing-2xl);
+
 }
 
 
 section {
     padding: var(--spacing-4xl) var(--spacing-default);
-text-align: left;
+    text-align: left;
 }
 
 p,
@@ -41,6 +42,7 @@ a {
 }
 
 button {
+    max-width: 38rem;
     @include bodyTextHeading();
     text-transform: uppercase;
     @include flex(row, center, center);
@@ -51,6 +53,7 @@ button {
     gap: var(--spacing-default);
     margin-bottom: var(--spacing-m);
     transition: all .25s ease-in;
+    font-size: var(--font-size-title-mobile);
 
     // &:hover {
     //     border: 2px solid var(--seashell);
@@ -153,6 +156,7 @@ blockquote {
     gap: var(--spacing-xl);
     margin-right: var(--spacing-2xl);
 
+
     h2 {
         @include displayTitle();
     }
@@ -179,17 +183,48 @@ footer .cta {
     }
 }
 
+.desktop-column {
+    width: 100%;
+    @include flex(column, flex-start, flex-start);
+    gap: var(--spacing-2xl);
+}
+
 @media screen and (min-width: 37.5em) {
+
     /* Tablet > 600px */
     section {
         padding: var(--spacing-4xl) var(--spacing-xl);
     }
-    h1{
+
+    h1 {
         padding-right: 10rem;
     }
-  
+
 }
 
-@media screen and (min-width: 75em) {
-    /* Desktop > 1200px */
+@media screen and (min-width: 56.25em) {
+
+    /* Desktop > 900px */
+    section,
+    header {
+        * {
+            max-width: 100rem;
+        }
+
+    }
+
+    section {
+        @include flex(row, space-around, flex-start);
+        padding: var(--spacing-5xl) 0;
+    }
+
+    body {
+        align-items: center;
+    }
+
+    .desktop-column {
+        width: 57rem;
+        @include flex(column, space-around, flex-start);
+        gap: var(--spacing-2xl);
+    }
 }

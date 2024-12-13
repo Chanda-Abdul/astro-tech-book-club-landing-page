@@ -16,5 +16,20 @@ import FiveStars from './FiveStars.astro';
 <style lang='scss'>
   .social-proof {
     padding-top: 0;
+    blockquote h2 {
+      text-align: left;
+      align-items: left;
+    }
+
+    @media screen and (min-width: 56.25em) {
+      /* Desktop > 900px */
+      flex-direction: column;
+     
+    }
+
+    blockquote {
+      text-align: center;
+      // align-items: center;
+    }
   }
 </style>

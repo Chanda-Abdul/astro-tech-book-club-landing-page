@@ -4,14 +4,16 @@ import ResponsiveImage from './ResponsiveImage.astro';
 ---
 
 <section class='hero'>
-  <h1>Join the ultimate tech book club</h1>
-  <p>
-    Turn your reading time into learning time with fellow tech enthusiasts. Get
-    curated recommendations, join vibrant discussions, and level up your skills
-    one chapter at a time.
-  </p>
+  <div class='desktop-column'>
+    <h1>Join the ultimate tech book club</h1>
+    <p>
+      Turn your reading time into learning time with fellow tech enthusiasts.
+      Get curated recommendations, join vibrant discussions, and level up your
+      skills one chapter at a time.
+    </p>
 
-  <CTA />
+    <CTA />
+  </div>
 
   <ResponsiveImage
     mobileImgUrl='/assets/media/images/image-hero-mobile.webp'
@@ -22,32 +24,42 @@ import ResponsiveImage from './ResponsiveImage.astro';
 </section>
 
 <style lang='scss'>
-  .hero {
-    background-image: url('/assets/media/images/pattern-light-bg.svg');
-    position: static;
+  .hero {    position: static;
     top: 0;
     left: 0;
     z-index: 1;
+    width: 100vw;
+    background: var(--card-gradient);
+     background-repeat: repeat;
+ background-image: url('/assets/media/images/pattern-light-bg.svg');
     padding-top: var(--spacing-3xl);
 
     &::before {
       content: '';
+      background-repeat: repeat;
+      background-image: url('/assets/media/images/pattern-light-bg.svg');
+     background: var(--card-gradient);
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: calc(100% + 35rem);
-      opacity: 0.4;
-      z-index: -1;
-      background: var(--card-gradient);
+      height: 100%;
+      opacity: 0.4; 
       backdrop-filter: blur(100px);
+      z-index: -1;
     }
     @media screen and (min-width: 37.5em) {
       /* Tablet > 600px */
       padding-top: var(--spacing-4xl);
 
       &::before {
-        height: 155%;
+      }
+    }
+    @media screen and (min-width: 56.25em) {
+      /* Desktop > 600px */
+      padding-top: var(--spacing-4xl);
+
+      &::before {
       }
     }
   }
