@@ -41,12 +41,15 @@ const membershipTiers = [
       blend technical depth with practical applications.
     </p>
   </div>
-  <ResponsiveImage
-    mobileImgUrl='/assets/media/images/image-not-average-mobile.webp'
-    tabletImgUrl='/assets/media/images/image-not-average-tablet.webp'
-    desktopImgUrl='/assets/media/images/image-not-average-desktop.webp'
-    alt='read together image'
-  />
+  <div class='overlay'>
+    <img src='public/assets/media/images/logos-tech.svg' alt='tech logos' />
+    <ResponsiveImage
+      mobileImgUrl='/assets/media/images/image-not-average-mobile.webp'
+      tabletImgUrl='/assets/media/images/image-not-average-tablet.webp'
+      desktopImgUrl='/assets/media/images/image-not-average-desktop.webp'
+      alt='read together image'
+    />
+  </div>
 </section>
 <Process />
 <section class='membership'>
@@ -100,6 +103,16 @@ const membershipTiers = [
       }
     }
   }
+  .overlay {
+    position: relative;
+    img {
+      position: absolute;
+      left: -6rem;
+      bottom: 3rem;
+      width: 12rem;
+      height: 14rem;
+    }
+  }
   p {
     margin-bottom: 0;
   }
@@ -151,7 +164,7 @@ const membershipTiers = [
           z-index: 2;
           left: -1rem;
           top: 0rem;
-          width: 80rem;
+
           transform: rotate(-5.091deg);
         }
       }
