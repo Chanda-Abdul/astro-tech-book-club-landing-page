@@ -32,10 +32,28 @@ const processSteps = [
 </section>
 
 <style lang='scss'>
+  @media screen and (max-width: 37.5em) {
+   /* Mobile < 600px */
+    .process {
+      display: none;
+    }
+}
+@media screen and (min-width: 37.5em) {
+
+/* Tablet > 600px */
+.process {
+      display: flex;
+    }
+
+}
+@media screen and (min-width: 75em) {
+
+/* Desktop > 1200px */
+}
   .process {
     article {
       background: var(--card-gradient);
-      background-image: url('assets/media/images/pattern-light-bg.svg');
+      background-image: url('/assets/media/images/pattern-light-bg.svg');
       position: relative;
       z-index: 1;
       &::before {

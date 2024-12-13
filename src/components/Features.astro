@@ -1,26 +1,25 @@
 ---
 import ResponsiveImage from './ResponsiveImage.astro';
+
+const featuresList = [
+  'Monthly curated tech reads selected by industry experts',
+  'Virtual and in-person meetups for deep-dive discussions',
+  'Early access to new tech book releases',
+  'Author Q&A sessions with tech thought leaders',
+];
 ---
 
 <section class='features'>
   <h2>Read together, grow together</h2>
   <ul>
-    <li>
-      <img src='/assets/media/icons/icon-check.svg' alt='check' />
-      <p>Monthly curated tech reads selected by industry experts</p>
-    </li>
-    <li>
-      <img src='/assets/media/icons/icon-check.svg' alt='check' />
-      <p>Virtual and in-person meetups for deep-dive discussions</p>
-    </li>
-    <li>
-      <img src='/assets/media/icons/icon-check.svg' alt='check' />
-      <p>Early access to new tech book releases</p>
-    </li>
-    <li>
-      <img src='/assets/media/icons/icon-check.svg' alt='check' />
-      <p>Author Q&A sessions with tech thought leaders</p>
-    </li>
+    {
+      featuresList.map((feature) => (
+        <li>
+          <img src='/assets/media/icons/icon-check.svg' alt='check' />
+          <p>{feature}</p>
+        </li>
+      ))
+    }
   </ul>
 
   <ResponsiveImage
@@ -34,7 +33,6 @@ import ResponsiveImage from './ResponsiveImage.astro';
 <style lang='scss'>
   .features {
     background-color: var(--blanc);
-    padding: var(--spacing-3xl) var(--spacing-default);
     ul li {
       margin-bottom: var(--spacing-default);
     }

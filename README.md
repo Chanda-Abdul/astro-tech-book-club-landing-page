@@ -8,12 +8,12 @@ This is a solution to the [Tech book club landing page challenge on Frontend Men
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-proc`  ess)
+- [My process](#my-process)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-![Design preview for the Tech book club landing page coding challenge](./src/assets/design/preview.jpg)
+![Design preview for the Tech book club landing page coding challenge](/public/assets/design/preview.jpg)
 
 ## Overview
 
@@ -22,6 +22,9 @@ This is a solution to the [Tech book club landing page challenge on Frontend Men
 Users should be able to:
 
 - [ ] View the optimal layout for the interface depending on their device's screen size
+  - [x] Mobile `<600px`
+  - [ ] Tablet `>600px` && `<900px`
+  - [ ] Desktop `<900px`
 - [ ] See hover and focus states for all interactive elements on the page
 
 ### Screenshot
@@ -36,14 +39,7 @@ Users should be able to:
 
 ### Built with
 
-<!-- - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles -->
+<img src='https://github.com/delucis/astro-badge/raw/latest/public/v2/built-with-astro/small.svg' height=32px><img src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E' height=32px><img src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white' height=32px><img src='https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white' height=32px><img src='https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white' height=32px>
 
 
 
@@ -63,10 +59,9 @@ Astro powers the world's fastest marketing sites, blogs, e-commerce websites, an
 
 ## Author
 
-<!-- - Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername) -->
-
+- Website - [Chanda Abdul](https://www.Chandabdul.dev)
+- GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)
+- Frontend Mentor - [@Chanda-Abdul](https://www.frontendmentor.io/profile/Chanda-Abdul)
 
 
 

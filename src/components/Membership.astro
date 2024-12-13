@@ -24,7 +24,7 @@ const membershipTiers = [
 
 <section class='connect'>
   <h2>
-    Not your average book <span class='circ'
+    Not your <br />average book <br /><span class='circ'
       >club <img
         src='/assets/media/images/pattern-circle.png'
         alt='circle patttern'
@@ -81,27 +81,36 @@ const membershipTiers = [
 
 <style lang='scss'>
   .connect {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+    h2 {
+      margin-bottom: 0;
+    }
     .circ {
       display: block;
       position: relative;
       img {
         position: absolute;
-        left: -1.2rem;
-        top: -0.5rem;
-        width: 13rem;
+        left: -1.5rem;
+        top: -0.75rem;
+        width: 12rem;
       }
     }
   }
 
   .membership {
+    padding-top: 0;
+    h2 {
+      margin-bottom: 0;
+    }
     ul {
       width: 100%;
       display: flex;
       flex-direction: column;
       gap: var(--spacing-default);
       hr {
-        height: 1px;
-        width: 100%;
         background: var(--bridal-veil);
       }
       li:nth-child(odd) article {
@@ -126,7 +135,7 @@ const membershipTiers = [
       }
     }
     &__card {
-      // width: 34rem;
+
     }
   }
 </style>

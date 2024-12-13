@@ -20,18 +20,16 @@ section,
 footer {
     width: 100%;
     @include flex(column, flex-start, flex-start);
-    padding: var(--spacing-l) var(--spacing-default);
-
-    &:last-of-type {
-        padding-bottom: var(--spacing-5xl);
-    }
+    gap: var(--spacing-2xl);
 }
+
 
 section {
-    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-4xl) var(--spacing-default);
 }
 
-p {
+p,
+a {
     @include bodyText();
     color: var(--midsummer-night);
     margin-bottom: var(--spacing-xl);
@@ -41,26 +39,36 @@ p {
     }
 }
 
-
 button {
     @include bodyTextHeading();
     text-transform: uppercase;
     @include flex(row, center, center);
     align-self: stretch;
-    border: 2px solid var(--stellar-explorer);
+
     border-radius: var(--border-radius-default);
     padding: var(--spacing-m) var(--spacing-l);
     gap: var(--spacing-default);
-    background: var(--seashell);
     margin-bottom: var(--spacing-m);
     transition: all .25s ease-in;
 
-    &:hover {
-        border: 2px solid var(--seashell);
-        color: var(--seashell);
-        background: var(--stellar-explorer);
+    // &:hover {
+    //     border: 2px solid var(--seashell);
+    //     color: var(--seashell);
+    //     background: var(--stellar-explorer);
+    // }
+}
+
+.hero .cta button,
+.btn-secondary {
+    background: var(--seashell);
+    border: 2px solid var(--stellar-explorer);
+    color: var(--stellar-explorer);
+
+    .on-dark {
+        display: none;
     }
 }
+
 
 h1 {
     @include displayTextHeader();
@@ -73,7 +81,6 @@ h1 {
 
 h2 {
     @include displayTextSecondaryHeader();
-    margin-bottom: var(--spacing-l);
 }
 
 h3 {
@@ -83,17 +90,23 @@ h3 {
 h4 {
 
     @include displayTextSecondaryHeader();
-    color: var(--midsummer-night);
     @include flex(row, center, center);
+    color: var(--stellar-explorer);
 
     span {
         @include bodyTextHeading();
+        padding-left: 8px;
+        color: var(--midsummer-night);
         font-family: var(--default-font-body);
         font-weight: var(--font-weight-default);
+        font-size: 2rem;
+        line-height: 140%;
+        letter-spacing: -0.5px;
     }
 }
 
-h5, h6 {
+h5,
+h6 {
     @include bodyTextSubtitle();
 
 }
@@ -105,6 +118,13 @@ article {
     gap: var(--spacing-l);
     border-radius: var(--border-radius-default);
     border: 1px solid var(--bridal-veil);
+
+
+}
+
+hr {
+    height: 1px;
+    width: 100%;
 }
 
 
@@ -124,6 +144,11 @@ ol li span {
 }
 
 blockquote {
+    display: flex;
+    @include flex(column, flex-start, flex-start);
+    gap: var(--spacing-xl);
+    margin-right: var(--spacing-2xl);
+
     h2 {
         @include displayTitle();
     }
@@ -134,14 +159,27 @@ blockquote {
     }
 }
 
+footer .cta {
+    h6 {
+        color: var(--blanc);
+    }
+
+    button {
+        background: var(--stellar-explorer);
+        border: 2px solid var(--blanc);
+        color: var(--blanc);
+
+        .on-light {
+            display: none;
+        }
+    }
+}
 
 @media screen and (min-width: 37.5em) {
-
     /* Tablet > 600px */
 
 }
 
 @media screen and (min-width: 75em) {
-
     /* Desktop > 1200px */
 }
