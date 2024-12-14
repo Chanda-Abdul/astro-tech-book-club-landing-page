@@ -11,9 +11,26 @@
 }
 
 body {
+    position: relative;
+    height: 100%;
     color: var(--midsummer-night);
+    background-image: url('/assets/media/images/pattern-light-bg.svg');
     @include flex(column, flex-start, flex-start);
-    align-self: stretch;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: var(--card-gradient);
+        background-repeat: repeat;
+        background-image: url('/assets/media/images/pattern-light-bg.svg');
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        backdrop-filter: blur(100px);
+        z-index: -1;
+    }
 }
 
 section,
@@ -157,12 +174,6 @@ ol li span {
 }
 
 blockquote {
-    display: flex;
-    @include flex(column, flex-start, flex-start);
-    gap: var(--spacing-xl);
-    margin-right: var(--spacing-2xl);
-
-
     h2 {
         @include displayTitle();
     }
@@ -207,7 +218,6 @@ footer .cta {
 }
 
 @media screen and (min-width: 37.5em) {
-
     /* Tablet > 600px */
     section {
         padding: var(--spacing-4xl) var(--spacing-xl);
@@ -222,16 +232,8 @@ footer .cta {
 @media screen and (min-width: 56.25em) {
 
     /* Desktop > 900px */
-    section,
-    header {
-        * {
-            max-width: 100rem;
-        }
-
-    }
-
     section {
-        @include flex(row, space-around, flex-start);
+        @include flex(row, space-between, flex-start);
         padding: var(--spacing-5xl) 0;
     }
 
@@ -241,7 +243,7 @@ footer .cta {
 
     .desktop-column {
         width: 57rem;
-        @include flex(column, space-around, flex-start);
+        @include flex(column, space-between, flex-start);
         gap: var(--spacing-2xl);
     }
 }

@@ -39,6 +39,7 @@ const processSteps = [
     /* Tablet > 600px */
     .process {
       display: flex;
+      background-color: var(--blanc);
     }
   }
 
@@ -48,9 +49,9 @@ const processSteps = [
       background-image: url('/assets/media/images/pattern-light-bg.svg');
       position: relative;
       z-index: 1;
-      h2{
-          max-width:51.2rem;
-        }
+      h2 {
+        max-width: 51.2rem;
+      }
       &::before {
         content: '';
         position: absolute;
@@ -86,7 +87,6 @@ const processSteps = [
           display: flex;
           width: 100%;
           flex-direction: row;
-          align-content: center;
           justify-content: flex-start;
           align-items: center;
           gap: var(--spacing-xl);
@@ -116,18 +116,21 @@ const processSteps = [
     }
     @media screen and (min-width: 56.25em) {
       /* Desktop > 1200px */
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       article {
+        width: 117rem;
         padding: var(--spacing-5xl) var(--spacing-3xl);
         gap: var(--spacing-4xl);
-      h2{
-        align-self: center;
-      }
+        h2 {
+          align-self: center;
+        }
         ol {
           flex-direction: row;
           display: flex;
-
-       
-
           gap: var(--spacing-4xl);
         }
       }

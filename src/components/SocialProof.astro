@@ -16,20 +16,34 @@ import FiveStars from './FiveStars.astro';
 <style lang='scss'>
   .social-proof {
     padding-top: 0;
-    blockquote h2 {
-      text-align: left;
-      align-items: left;
-    }
-
-    @media screen and (min-width: 56.25em) {
-      /* Desktop > 900px */
-      flex-direction: column;
-     
-    }
-
+    background-color: var(--blanc);
     blockquote {
-      text-align: center;
- 
+      gap: var(--spacing-xl);
+      margin-right: var(--spacing-2xl);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      h2,
+      h3 {
+      }
+    }
+  }
+  @media screen and (min-width: 56.25em) {
+    /* Desktop > 1200px */
+    .social-proof {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      blockquote {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 </style>

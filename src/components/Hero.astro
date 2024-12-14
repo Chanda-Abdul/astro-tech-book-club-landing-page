@@ -24,30 +24,8 @@ import ResponsiveImage from './ResponsiveImage.astro';
 </section>
 
 <style lang='scss'>
-  .hero {    position: static;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100vw;
-    background: var(--card-gradient);
-     background-repeat: repeat;
- background-image: url('/assets/media/images/pattern-light-bg.svg');
+  .hero {
     padding-top: var(--spacing-3xl);
-
-    &::before {
-      content: '';
-      background-repeat: repeat;
-      background-image: url('/assets/media/images/pattern-light-bg.svg');
-     background: var(--card-gradient);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.4; 
-      backdrop-filter: blur(100px);
-      z-index: -1;
-    }
     @media screen and (min-width: 37.5em) {
       /* Tablet > 600px */
       padding-top: var(--spacing-4xl);
@@ -58,9 +36,7 @@ import ResponsiveImage from './ResponsiveImage.astro';
     @media screen and (min-width: 56.25em) {
       /* Desktop > 600px */
       padding-top: var(--spacing-4xl);
-
-      &::before {
-      }
+      max-width: 117rem;
     }
   }
 </style>

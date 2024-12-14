@@ -89,28 +89,28 @@ const membershipTiers = [
     padding-top: 0;
     gap: var(--spacing-l);
     padding-right: 2rem;
+    background-color: var(--blanc);
     h2 {
       margin-bottom: 0;
     }
     .circ {
       position: relative;
+      height: 110%;
+      width: 110%;
       img {
         position: absolute;
-        z-index: 2;
-        left: -1.5rem;
-        top: -0.75rem;
-        width: 12rem;
+        z-index: 5;
+        left: 0rem;
+        top: 0.5rem;
+        height: 100%;
+        width: 100%;
       }
     }
   }
   .overlay {
     position: relative;
     img {
-      position: absolute;
-      left: -6rem;
-      bottom: 3rem;
-      width: 12rem;
-      height: 14rem;
+      display: none;
     }
   }
   p {
@@ -119,6 +119,7 @@ const membershipTiers = [
 
   .membership {
     padding-top: 0;
+    background-color: var(--blanc);
     h2 {
       margin-bottom: 0;
     }
@@ -169,6 +170,7 @@ const membershipTiers = [
         }
       }
     }
+
     .membership {
       ul {
         flex-direction: row;
@@ -190,13 +192,24 @@ const membershipTiers = [
   @media screen and (min-width: 56.25em) {
     /* Desktop > 900px */
     .connect {
-      padding-right: 0;
+      max-width: 117rem;
+    }
+    .overlay {
+      img {
+        display: block;
+        position: absolute;
+        left: -6rem;
+        bottom: 3rem;
+        width: 12rem;
+        height: 14rem;
+      }
     }
     .membership {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 117rem;
       ul {
         flex-wrap: nowrap;
         gap: var(--spacing-l);
